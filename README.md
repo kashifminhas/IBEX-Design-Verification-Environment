@@ -14,8 +14,8 @@ Verification Environment for Instruction Fetch (IF) and Load Store Unit (LSU) of
 
 - bin_files folder contains two binary file, which are given as an input to the core to test the behaviour of the verification environment.
 
-1. fab.bin is a binary file to test simple fibonacci series.
-2. riscv_arithmetic_basic_test_0.bin is a binary file of riscv_arithmetic_basic_test of riscv-dv.
+  1. fab.bin is a binary file to test simple fibonacci series.
+  2. riscv_arithmetic_basic_test_0.bin is a binary file of riscv_arithmetic_basic_test of riscv-dv.
 
 ## Tools Used
 
