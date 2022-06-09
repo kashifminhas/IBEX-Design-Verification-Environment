@@ -54,7 +54,7 @@ Verification Environment for Instruction Fetch (IFU) and Load Store Unit (LSU) o
 <img alt="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-c49c823e-9f9e-4aa9-9921-6b49c6036009.svg" src="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-c49c823e-9f9e-4aa9-9921-6b49c6036009.svg"><p class="caption"><span class="caption-number">Figure 7 </span><span class="caption-text">Back-to-back Memory Transaction</span><a class="headerlink" href="#timing2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="timing3">
-<img alt="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-204a9397-ddfc-46c4-9103-0d707909c28c.svg" src="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-204a9397-ddfc-46c4-9103-0d707909c28c.svg"><p class="caption"><span class="caption-number"></span><span class="caption-text">Slow Response Memory Transaction</span></p>
+<img alt="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-204a9397-ddfc-46c4-9103-0d707909c28c.svg" src="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-204a9397-ddfc-46c4-9103-0d707909c28c.svg"><p class="caption" ><span class="caption-number"></span><span class="caption-text" style="text-align: center;">Slow Response Memory Transaction</span></p>
 </div>
 </div>
 
