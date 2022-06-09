@@ -3,7 +3,6 @@
 Verification Environment for Instruction Fetch (IF) and Load Store Unit (LSU) of IBEX Core.
 
 ![env](https://ibex-core.readthedocs.io/en/latest/_images/icache_block.svg)
-![env]([https://ibex-core.readthedocs.io/en/latest/_images/icache_block.svg](https://ibex-core.readthedocs.io/en/latest/_images/de_ex_stage.svg))
 
 ## RTL
 
