@@ -29,7 +29,7 @@ Verification Environment for Instruction Fetch (IF) and Load Store Unit (LSU) of
 ### To Compile the Test Environment
 "vcs -licqueue '-timescale=1ns/1ns' '+vcs+flush+all' '+warn=all' '-sverilog' -ntb_opts uvm-1.2 -CFLAGS -DVCS design.sv testbench.sv -debug_access+r"
 
-### To Simulated the Test Environment
+### To Simulate the Test Environment
 
 "./simv +bin=<binary_file_name> -gui"
 
