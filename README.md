@@ -1,4 +1,4 @@
-# IBEX_Design_Verification_Environment
+# IBEX Design Verification Environment
 
 Verification Environment for Instruction Fetch (IFU) and Load Store Unit (LSU) of IBEX Core.
 
