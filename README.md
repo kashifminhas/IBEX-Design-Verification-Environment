@@ -4,6 +4,8 @@ Verification Environment for Instruction Fetch (IFU) and Load Store Unit (LSU) o
 
 ![env](https://ibex-core.readthedocs.io/en/latest/_images/if_stage.svg)
 
+![env](https://ibex-core.readthedocs.io/en/latest/_images/if_stage.svg)
+
 ## RTL
 
 - rtl folder contains the design files of the IBEX core.
@@ -34,4 +36,25 @@ Verification Environment for Instruction Fetch (IFU) and Load Store Unit (LSU) o
 ### To Simulate the Test Environment
 
 "./simv +bin=<binary_file_name> -gui"
+
+<div class="section" id="protocol">
+<span id="lsu-protocol"></span><h2>Protocol<a class="headerlink" href="#protocol" title="Permalink to this headline">¶</a></h2>
+<p>The protocol that is used by the LSU to communicate with a memory works as follows:</p>
+<ol class="arabic simple">
+<li><p>The LSU provides a valid address in <code class="docutils literal notranslate"><span class="pre">data_addr_o</span></code> and sets <code class="docutils literal notranslate"><span class="pre">data_req_o</span></code> high. In the case of a store, the LSU also sets <code class="docutils literal notranslate"><span class="pre">data_we_o</span></code> high and configures <code class="docutils literal notranslate"><span class="pre">data_be_o</span></code> and <code class="docutils literal notranslate"><span class="pre">data_wdata_o</span></code>. The memory then answers with a <code class="docutils literal notranslate"><span class="pre">data_gnt_i</span></code> set high as soon as it is ready to serve the request. This may happen in the same cycle as the request was sent or any number of cycles later.</p></li>
+<li><p>After receiving a grant, the address may be changed in the next cycle by the LSU. In addition, the <code class="docutils literal notranslate"><span class="pre">data_wdata_o</span></code>, <code class="docutils literal notranslate"><span class="pre">data_we_o</span></code> and <code class="docutils literal notranslate"><span class="pre">data_be_o</span></code> signals may be changed as it is assumed that the memory has already processed and stored that information.</p></li>
+<li><p>The memory answers with a <code class="docutils literal notranslate"><span class="pre">data_rvalid_i</span></code> set high for exactly one cycle to signal the response from the bus or the memory using <code class="docutils literal notranslate"><span class="pre">data_err_i</span></code> and <code class="docutils literal notranslate"><span class="pre">data_rdata_i</span></code> (during the very same cycle). This may happen one or more cycles after the grant has been received. If <code class="docutils literal notranslate"><span class="pre">data_err_i</span></code> is low, the request could successfully be handled at the destination and in the case of a load, <code class="docutils literal notranslate"><span class="pre">data_rdata_i</span></code> contains valid data. If <code class="docutils literal notranslate"><span class="pre">data_err_i</span></code> is high, an error occurred in the memory system and the core will raise an exception.</p></li>
+<li><p>When multiple granted requests are outstanding, it is assumed that the memory requests will be kept in-order and one <code class="docutils literal notranslate"><span class="pre">data_rvalid_i</span></code> will be signalled for each of them, in the order they were issued.</p></li>
+</ol>
+<p><a class="reference internal" href="#timing1"><span class="std std-numref">Figure 6</span></a>, <a class="reference internal" href="#timing2"><span class="std std-numref">Figure 7</span></a> and <a class="reference internal" href="#timing3"><span class="std std-numref">Figure 8</span></a> show example-timing diagrams of the protocol.</p>
+<div class="figure align-default" id="timing1">
+<img alt="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-8c7146fa-3ced-4277-b4a7-2d9e5b157ee8.svg" src="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-8c7146fa-3ced-4277-b4a7-2d9e5b157ee8.svg"><p class="caption"><span class="caption-number">Figure 6 </span><span class="caption-text">Basic Memory Transaction</span><a class="headerlink" href="#timing1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="timing2">
+<img alt="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-c49c823e-9f9e-4aa9-9921-6b49c6036009.svg" src="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-c49c823e-9f9e-4aa9-9921-6b49c6036009.svg"><p class="caption"><span class="caption-number">Figure 7 </span><span class="caption-text">Back-to-back Memory Transaction</span><a class="headerlink" href="#timing2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="timing3">
+<img alt="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-204a9397-ddfc-46c4-9103-0d707909c28c.svg" src="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-204a9397-ddfc-46c4-9103-0d707909c28c.svg"><p class="caption"><span class="caption-number"></span><span class="caption-text">Slow Response Memory Transaction</span></p>
+</div>
+</div>
 
