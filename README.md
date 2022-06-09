@@ -2,6 +2,8 @@
 
 Verification Environment for Instruction Fetch (IF) and Load Store Unit (LSU) of IBEX Core.
 
+![env](https://drive.google.com/file/d/1tNovcWYuRPYIw5Hp3AlLxZkyQd6um9G6/view?usp=sharing)
+
 ## RTL
 
 - rtl folder contains the design files of the IBEX core.
