@@ -1,10 +1,8 @@
 # IBEX_Design_Verification_Environment
 
 Verification Environment for Instruction Fetch (IFU) and Load Store Unit (LSU) of IBEX Core.
+![68747470733a2f2f696265782d636f72652e72656164746865646f63732e696f2f656e2f6c61746573742f5f696d616765732f69665f73746167652e737667](https://user-images.githubusercontent.com/75377950/172785076-dee21004-5b49-4369-9017-892874ef66e2.svg)
 
-![env](https://ibex-core.readthedocs.io/en/latest/_images/if_stage.svg)
-
-![env](https://ibex-core.readthedocs.io/en/latest/_images/if_stage.svg)
 
 ## RTL
 
