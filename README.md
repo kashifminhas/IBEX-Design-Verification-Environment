@@ -2,6 +2,30 @@
 
 Verification Environment for Instruction Fetch (IFU) and Load Store Unit (LSU) of IBEX Core.
 
+## Directory Structure
+
+```tree
+UVM_PROJECT_AHB3_SLAVE/
+├── README.md
+├── rtl
+│   └── design.sv
+└── tb
+    ├── ahb_uvm_agent.sv
+    ├── ahb_uvm_driver.sv
+    ├── ahb_uvm_env.sv
+    ├── ahb_uvm_intf.sv
+    ├── ahb_uvm_monitor.sv
+    ├── ahb_uvm_pkg.sv
+    ├── ahb_uvm_scoreboard.sv
+    ├── ahb_uvm_seqitem.sv
+    ├── ahb_uvm_seq.sv
+    ├── ahb_uvm_sequencer.sv
+    ├── ahb_uvm_subscriber.sv
+    ├── ahb_uvm_test.sv
+    ├── amba_ahb_defines.v
+    └── testbench.sv
+```
+
 ## INSTRUCTION FETCH UNIT (IFU)
 
 ![68747470733a2f2f696265782d636f72652e72656164746865646f63732e696f2f656e2f6c61746573742f5f696d616765732f69665f73746167652e737667](https://user-images.githubusercontent.com/75377950/172785076-dee21004-5b49-4369-9017-892874ef66e2.svg)
