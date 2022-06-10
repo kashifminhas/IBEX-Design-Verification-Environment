@@ -5,10 +5,51 @@ Verification Environment for Instruction Fetch (IFU) and Load Store Unit (LSU) o
 ## Directory Structure
 
 ```tree
+
 UVM_PROJECT_AHB3_SLAVE/
+
+├── bin_files
+│   ├── fab.bin
+│   └── riscv_arithmetic_basic_test_0.bin
 ├── README.md
 ├── rtl
-│   └── design.sv
+│   ├── design.sv
+│   ├── dv_fcov_macros.svh
+│   ├── ibex_alu.sv
+│   ├── ibex_branch_predict.sv
+│   ├── ibex_compressed_decoder.sv
+│   ├── ibex_controller.sv
+│   ├── ibex_core.sv
+│   ├── ibex_counter.sv
+│   ├── ibex_cs_registers.sv
+│   ├── ibex_csr.sv
+│   ├── ibex_decoder.sv
+│   ├── ibex_dummy_instr.sv
+│   ├── ibex_ex_block.sv
+│   ├── ibex_fetch_fifo.sv
+│   ├── ibex_icache.sv
+│   ├── ibex_id_stage.sv
+│   ├── ibex_if_stage.sv
+│   ├── ibex_load_store_unit.sv
+│   ├── ibex_lockstep.sv
+│   ├── ibex_multdiv_fast.sv
+│   ├── ibex_multdiv_slow.sv
+│   ├── ibex_pkg.sv
+│   ├── ibex_pmp.sv
+│   ├── ibex_prefetch_buffer.sv
+│   ├── ibex_register_file_ff.sv
+│   ├── ibex_register_file_fpga.sv
+│   ├── ibex_register_file_latch.sv
+│   ├── ibex_top.sv
+│   ├── ibex_tracer_pkg.sv
+│   ├── ibex_tracer.sv
+│   ├── ibex_wb_stage.sv
+│   ├── prim_assert_standard_macros.svh
+│   ├── prim_assert.sv
+│   ├── prim_clock_gating.sv
+│   ├── prim_generic_clock_gating.sv
+│   ├── prim_pkg.sv
+│   └── prim_ram_1p_pkg.sv
 └── tb
     ├── ahb_uvm_agent.sv
     ├── ahb_uvm_driver.sv
@@ -24,6 +65,8 @@ UVM_PROJECT_AHB3_SLAVE/
     ├── ahb_uvm_test.sv
     ├── amba_ahb_defines.v
     └── testbench.sv
+
+
 ```
 
 ## INSTRUCTION FETCH UNIT (IFU)
