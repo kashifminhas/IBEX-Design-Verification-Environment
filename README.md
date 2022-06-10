@@ -51,14 +51,17 @@ Verification Environment for Instruction Fetch (IFU) and Load Store Unit (LSU) o
 <li><p>When multiple granted requests are outstanding, it is assumed that the memory requests will be kept in-order and one <code class="docutils literal notranslate"><span class="pre">data_rvalid_i</span></code> will be signalled for each of them, in the order they were issued.</p></li>
 </ol>
 <p>Figures below show example-timing diagrams of the protocol.</p>
-<div class="figure align-default" id="timing1">
-<img alt="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-8c7146fa-3ced-4277-b4a7-2d9e5b157ee8.svg" src="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-8c7146fa-3ced-4277-b4a7-2d9e5b157ee8.svg"><p class="caption"><span class="caption-text">Basic Memory Transaction</span></p>
 </div>
-<div class="figure align-default" id="timing2">
-<img alt="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-c49c823e-9f9e-4aa9-9921-6b49c6036009.svg" src="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-c49c823e-9f9e-4aa9-9921-6b49c6036009.svg"><p class="caption"><span class="caption-text">Back-to-back Memory Transaction</span></p>
-</div>
-<div class="figure align-default" id="timing3">
-<img alt="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-204a9397-ddfc-46c4-9103-0d707909c28c.svg" src="https://ibex-core.readthedocs.io/en/latest/_images/wavedrom-204a9397-ddfc-46c4-9103-0d707909c28c.svg"><p class="caption" ><span class="caption-number"></span><span class="caption-text" >Slow Response Memory Transaction</span></p>
-</div>
-</div>
+
+![1](https://user-images.githubusercontent.com/75377950/172986897-7b7d558c-f898-4bc9-812a-0cc1db5141f4.svg)
+
+<p class="caption"><span class="caption-text">Basic Memory Transaction</span></p>
+
+![2](https://user-images.githubusercontent.com/75377950/172986932-6d9ff172-6433-4ae3-a8fd-923da7925959.svg)
+
+<p class="caption"><span class="caption-text">Back-to-back Memory Transaction</span></p>
+
+![3](https://user-images.githubusercontent.com/75377950/172986662-f185de32-ae40-41ac-85c9-83070fa131c9.svg)
+<p class="caption" ><span class="caption-number"></span><span class="caption-text" >Slow Response Memory Transaction</span></p>
+
 
