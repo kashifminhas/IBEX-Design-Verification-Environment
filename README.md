@@ -51,21 +51,35 @@ UVM_PROJECT_AHB3_SLAVE/
 │   ├── prim_pkg.sv
 │   └── prim_ram_1p_pkg.sv
 └── tb
-    ├── ahb_uvm_agent.sv
-    ├── ahb_uvm_driver.sv
-    ├── ahb_uvm_env.sv
-    ├── ahb_uvm_intf.sv
-    ├── ahb_uvm_monitor.sv
-    ├── ahb_uvm_pkg.sv
-    ├── ahb_uvm_scoreboard.sv
-    ├── ahb_uvm_seqitem.sv
-    ├── ahb_uvm_seq.sv
-    ├── ahb_uvm_sequencer.sv
-    ├── ahb_uvm_subscriber.sv
-    ├── ahb_uvm_test.sv
-    ├── amba_ahb_defines.v
+    ├── bus_params_pkg.sv
+    ├── clk_if.sv
+    ├── clk_rst_if.sv
+    ├── core_ibex_fcov_bind.sv
+    ├── core_ibex_fcov_if.sv
+    ├── dv_macros.svh
+    ├── ibex_base_test.sv
+    ├── ibex_dut_intf.sv
+    ├── ibex_env_cfg.sv
+    ├── ibex_env_pkg.sv
+    ├── ibex_env.sv
+    ├── ibex_mem_agent_pkg.sv
+    ├── ibex_mem_agent.sv
+    ├── ibex_mem_driver.sv
+    ├── ibex_mem_intf.sv
+    ├── ibex_mem_monitor.sv
+    ├── ibex_mem_seq_item.sv
+    ├── ibex_mem_seq_lib.sv
+    ├── ibex_mem_sequencer.sv
+    ├── ibex_report_server.sv
+    ├── ibex_seq_lib.sv
+    ├── ibex_test_lib.sv
+    ├── ibex_test_pkg.sv
+    ├── ibex_vseqr.sv
+    ├── ibex_vseq.sv
+    ├── mem_model_pkg.sv
+    ├── mem_model.sv
+    ├── riscv_signature_pkg.sv
     └── testbench.sv
-
 
 ```
 
